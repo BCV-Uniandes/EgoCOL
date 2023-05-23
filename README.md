@@ -1,2 +1,2 @@
-# EgoCam: Egocentric Camera Pose estimation for Open-world 3D object localization
-EgoCam: Egocentric Camera Pose estimation for Open-world 3D object localization
+# EgoCOL: Egocentric Camera pose estimation for Open-world 3D object Localization
+EgoCOL: Egocentric Camera pose estimation for Open-world 3D object Localization
