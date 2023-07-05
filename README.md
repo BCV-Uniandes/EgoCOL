@@ -21,3 +21,10 @@ Please follow the instructions from the Ego4D Episodic Memory repository to down
 ## Run EgoCOL
 First, you need to compute the initial PnP camera poses by using the camera pose estimatio workflow proposed by Ego4D. Follow [these](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md#camera-pose-estimation)
 instructions to compute them. 
+
+Once you have computed the initial camera poses you can use colmap to create the sparse reconstrutions using both the video and clip configurations.
+```
+$ python run_registrations.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
+ --clips_dir {PATH_CLIPS_FRAMES} --output_dir {OUTPUT_PATH_COLMAP}
+```
+You get the folder "{PATH_CLIPS_CAMERA_POSES}" and "{PATH_CLIPS_FRAMES}" by running the camera pose estimation worflow proposed by Ego4D.
