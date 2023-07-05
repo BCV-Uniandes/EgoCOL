@@ -9,3 +9,7 @@ We present EgoCOL, an egocentric camera pose estimation method for open-world 3D
 <div align="center">
   <img src="https://github.com/BCV-Uniandes/EgoCOL/blob/main/img/Registration.drawio.png" width="100%" height="100%"/>
 </div><br/>
+
+## Installation instructions
+1. Please follow the installation instructions from the [Ego4D Episodic Memory repository](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md).
+2. 
