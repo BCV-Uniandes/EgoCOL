@@ -22,9 +22,14 @@ Please follow the instructions from the Ego4D Episodic Memory repository to down
 First, you need to compute the initial PnP camera poses by using the camera pose estimatio workflow proposed by Ego4D. Follow [these](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md#camera-pose-estimation)
 instructions to compute them. 
 
-Once you have computed the initial camera poses you can use colmap to create the sparse reconstrutions using both the video and clip configurations.
+Once you have computed the initial camera poses you can use colmap to create the sparse reconstrutions using both the video and clip configurations:
 ```
 $ python run_registrations.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
  --clips_dir {PATH_CLIPS_FRAMES} --output_dir {OUTPUT_PATH_COLMAP}
 ```
-You get the folder "{PATH_CLIPS_CAMERA_POSES}" and "{PATH_CLIPS_FRAMES}" by running the camera pose estimation worflow proposed by Ego4D.
+Similarly, run must run the registration for the scan configuration:
+```
+$ python3 run_registrations_by_scans.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
+--clips_dir {PATH_CLIPS_FRAMES} --output_dir {OUTPUT_PATH_COLMAP_SCAN} --camera_intrinsics_filename {PATH_TO_INTRINSICS} --query_filename {PATH_TO_QUERY_ANNOT_FILE}
+```
+You get the folders {PATH_CLIPS_CAMERA_POSES}, {PATH_CLIPS_FRAMES}, {PATH_TO_INTRINSICS} and {PATH_TO_QUERY_ANNOT_FILE} by running the camera pose estimation worflow proposed by Ego4D. You can use the defaul value of each argument in the .py files to help you locate the right paths.
