@@ -1,7 +1,8 @@
 # EgoCOL: Egocentric Camera pose estimation for Open-world 3D object Localization
-EgoCOL: Egocentric Camera pose estimation for Open-world 3D object Localization
+Cristhian Forigua, Maria Escobar, Jordi Pont-Tuset, Kevis-Kokitsi Maninis, Pablo Arbeláez
 
+[[`arXiv`](https://arxiv.org/abs/2306.16606)]
 
-### COLMAP
-
-Actualizar rutas en los transforms
+<div align="center">
+  <img src="https://bowenc0221.github.io/images/maskformerv2_teaser.png" width="100%" height="100%"/>
+</div><br/>
