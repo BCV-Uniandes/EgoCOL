@@ -12,4 +12,12 @@ We present EgoCOL, an egocentric camera pose estimation method for open-world 3D
 
 ## Installation instructions
 1. Please follow the installation instructions from the [Ego4D Episodic Memory repository](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md).
-2. 
+2. You need to install COLMAP to compute the reconstructions. Please follow [these](https://colmap.github.io/install.html) instructions to install it.
+3. Finally, you need to install the Open3D library. Follow [these](http://www.open3d.org/docs/release/getting_started.html) instructions to install it.
+
+## Data
+Please follow the instructions from the Ego4D Episodic Memory repository to download the VQ3D data [here](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md#data).
+
+## Run EgoCOL
+First, you need to compute the initial PnP camera poses by using the camera pose estimatio workflow proposed by Ego4D. Follow [these](https://github.com/EGO4D/episodic-memory/blob/main/VQ3D/README.md#camera-pose-estimation)
+instructions to compute them. 
