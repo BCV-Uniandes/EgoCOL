@@ -62,3 +62,7 @@ $ python3 scripts/run.py --input_dir {PATH_CLIPS_CAMERA_POSES} --output_filename
 ```
 $ python scripts/eval.py --vq3d_results {OUTPUT_RUN_JSON_FILE}
 ```
+## License and Acknowledgement
+This project borrows heavily from [Episodic Memory Ego4D Repository](https://github.com/EGO4D/episodic-memory/tree/0dfec57dc65fa008569a319e409f7db5c3e98bf5), we thank the authors for their contributions to the community. <br>
+## Contact
+If you have any question, please email cd.forigua@uniandes.edu.co 
