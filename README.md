@@ -42,10 +42,10 @@ $ python extract_dict_from_colmap_by_scans.py
 ```
 Then run the following lines:
 ```
-$ python transform_ext.py
-$ python transform_ext_by_scan.py
+$ python transform_ext.py --constrain --filter
+$ python transform_ext_by_scan.py --constrain --filter
 ```
-Make sure to change the paths for the flags. Also change the paths in lines *341* and *370* for the transform_ext.py and the lines *286*, *207* and *369* for the transform_ext_by_scan.py. 
+Make sure to change the paths for the flags. Also change the paths in lines *341* and *370* for the transform_ext.py and the lines *286*, *207* and *369* for the transform_ext_by_scan.py. The filter and constrain flags are to apply 3D constrain 
 
 ## Evaluate
 ### Center scan
