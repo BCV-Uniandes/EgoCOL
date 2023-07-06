@@ -45,4 +45,4 @@ Then run the following lines:
 $ python transform_ext.py
 $ python transform_ext_by_scan.py
 ```
-Make sure to change the paths for the flags. Also change the paths in lines 341 and 370 for the transform_ext.py and the lines 286, 207 and 369 for the transform_ext_by_scan.py. 
+Make sure to change the paths for the flags. Also change the paths in lines *341* and *370* for the transform_ext.py and the lines *286*, *207* and *369* for the transform_ext_by_scan.py. 
