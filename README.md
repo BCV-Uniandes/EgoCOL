@@ -24,12 +24,25 @@ instructions to compute them.
 
 Once you have computed the initial camera poses you can use colmap to create the sparse reconstrutions using both the video and clip configurations:
 ```
+$ cd colmap
 $ python run_registrations.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
  --clips_dir {PATH_CLIPS_FRAMES} --output_dir {OUTPUT_PATH_COLMAP}
 ```
 Similarly, run must run the registration for the scan configuration:
 ```
-$ python3 run_registrations_by_scans.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
+$ python run_registrations_by_scans.py --input_poses_dir {PATH_CLIPS_CAMERA_POSES} \
 --clips_dir {PATH_CLIPS_FRAMES} --output_dir {OUTPUT_PATH_COLMAP_SCAN} --camera_intrinsics_filename {PATH_TO_INTRINSICS} --query_filename {PATH_TO_QUERY_ANNOT_FILE}
 ```
 You get the folders {PATH_CLIPS_CAMERA_POSES}, {PATH_CLIPS_FRAMES}, {PATH_TO_INTRINSICS} and {PATH_TO_QUERY_ANNOT_FILE} by running the camera pose estimation worflow proposed by Ego4D. You can use the defaul value of each argument in the .py files to help you locate the right paths.
+
+Then, you can compute the procrustes transformation between the PnP and sparse points by running the next lines. Make sure to change the paths for the "--annotations_dir", "--input_dir_colmap" and "--clips_dir" flags before you run the code.
+```
+$ python extract_dict_from_colmap.py
+$ python extract_dict_from_colmap_by_scans.py
+```
+Then run the following lines:
+```
+$ python transform_ext.py
+$ python transform_ext_by_scan.py
+```
+Make sure to change the paths for the flags. Also change the paths in lines 341 and 370
