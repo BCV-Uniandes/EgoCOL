@@ -49,7 +49,16 @@ Make sure to change the paths for the flags. Also change the paths in lines *341
 
 ## Evaluate
 ### Center scan
+To evaluate our method you can use the center of the scan as:
+1. Compute Ground-Truth vector in query frame coordinate system for queries with pose estimated.
 ```
-$ python transform_ext.py
-$ python transform_ext_by_scan.py
+$ python scripts/prepare_ground_truth_for_queries.py --input_dir {PATH_CLIPS_CAMERA_POSES} --vq3d_queries {VQ3D_QUERIES_ANNOT_JSON_FILE} --output_filename {OUTPUT_JSON_FILE} --vq2d_queries {VQ2D_QUERIES_ANNOT_JSON_FILE} --check_colmap
+```
+2. Compute 3D vector predictions
+```
+$ python3 scripts/run.py --input_dir {PATH_CLIPS_CAMERA_POSES} --output_filename {OUTPUT_RUN_JSON_FILE} --vq2d_results {VQ2D_RESULTS_JSON_FILE} --vq2d_annot {VQ2D_ANNOT_JSON_FILE} --vq2d_queries {VQ2D_QUERIES_ANNOT_JSON_FILE} --vq3d_queries {OUTPUT_JSON_FILE} --check_colmap --constrain --baseline_center
+```
+3. Run evaluation
+```
+$ python scripts/eval.py --vq3d_results {OUTPUT_RUN_JSON_FILE}
 ```
